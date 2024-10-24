@@ -1,18 +1,33 @@
-/* General Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* General Layout */
 body {
   font-family: "Red Hat Text", sans-serif;
-  background-color: #f8f8f8; /* Soft baby-related background color */
-  color: #333;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #f2f7fa; /* Light pastel background */
+  color: #34495e; /* Soft, neutral text color */
+}
+
+/* Stars and Hills */
+.stars,
+.hills {
+  position: absolute;
+}
+
+.hills {
+  bottom: 0;
 }
 
 /* Container */
@@ -21,121 +36,133 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 20px;
   min-height: 70vh;
+  padding: 0 20px;
 }
 
 .container h1 {
-  color: #72cdd1; /* Soft pastel color for the title */
-  font-size: 2.2rem;
+  color: #76c7c0; /* Pastel mint for the header */
+  font-size: clamp(20px, 5vw, 36px);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
-/* Countdown */
+/* Loading Animation */
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f2a6b3; /* Soft pink for the spinner */
+  border-top-color: #f9e79f; /* Soft yellow for the spinner animation */
+  border-radius: 50%;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Countdown Section */
 .countdown {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
-  gap: 15px;
+  margin-top: 20px;
 }
 
 .countdown div {
-  margin: 5px;
+  margin: 10px;
 }
 
 .countdown p {
-  background-color: #ffebcc; /* Soft pastel yellow for countdown blocks */
-  color: #333;
-  font-size: 3rem;
+  background-color: #f9e79f; /* Soft yellow for countdown boxes */
+  color: #34495e; /* Neutral text color */
+  font-size: clamp(30px, 5vw, 46px);
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  min-width: 80px;
 }
 
 .countdown h3 {
-  color: #72cdd1; /* Soft pastel matching the title */
+  color: #76c7c0; /* Pastel mint for labels */
   text-transform: uppercase;
-  font-size: 1rem;
+  letter-spacing: 2px;
+  font-size: clamp(12px, 2vw, 18px);
   margin-top: 10px;
 }
 
-/* Subheading */
+/* Final Message */
 h4 {
-  color: #f783ac; /* Soft pink for the subheading */
-  font-size: 1.8rem;
+  color: #f2a6b3; /* Soft pink for final message */
+  font-size: clamp(20px, 4vw, 36px);
   margin-top: 40px;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
-/* Socials */
+/* Socials Section */
 .socials {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
 }
 
 .socials ul {
   display: flex;
-  gap: 20px;
 }
 
 .socials ul li {
-  list-style: none;
+  margin: 0 20px;
 }
 
 /* Attribution */
 .attribution {
-  font-size: 0.8rem;
+  font-size: 11px;
   text-align: center;
-  color: #666;
-  margin-top: 20px;
+  color: #34495e;
 }
 
 .attribution a {
-  color: #72cdd1;
+  color: #76c7c0;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  .countdown p {
-    font-size: 2.5rem;
-    padding: 15px;
+/* Responsive Design for Small Screens */
+@media (max-width: 500px) {
+  .container {
+    padding: 0 20px;
   }
 
-  .container h1 {
-    font-size: 1.8rem;
-  }
-
-  h4 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 480px) {
   .countdown {
     flex-direction: column;
   }
+}
 
-  .countdown p {
-    font-size: 2rem;
-    padding: 10px;
+/* Responsive Design for Large Screens */
+@media (min-width: 1440px) {
+  .stars img,
+  .hills img {
+    width: 1600px;
   }
+}
 
-  .container h1 {
-    font-size: 1.5rem;
-  }
-
-  h4 {
-    font-size: 1.2rem;
-  }
-
-  .socials ul {
-    gap: 15px;
+@media (min-width: 1600px) {
+  .stars img,
+  .hills img {
+    width: 1920px;
   }
 }
