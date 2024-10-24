@@ -1,170 +1,169 @@
 /* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 /* General Layout */
 body {
-  font-family: "Red Hat Text", sans-serif;
-  background-color: #f2f7fa; /* Light pastel background */
-  color: #34495e; /* Soft, neutral text color */
-  margin: 0; /* Ensure no margin on the body */
+    font-family: "Red Hat Text", sans-serif;
+    background-color: #f2f7fa; /* Light pastel background */
+    color: #34495e; /* Soft, neutral text color */
+    margin: 0; /* Ensure no margin on the body */
 }
 
 /* Stars and Hills */
 .stars,
 .hills {
-  position: absolute;
+    position: absolute;
 }
 
 .hills {
-  bottom: 0;
+    bottom: 0;
 }
 
 /* Container */
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 70vh;
-  padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 0 20px;
 }
 
 .container h1 {
-  color: #76c7c0; /* Pastel mint for the header */
-  font-size: clamp(20px, 5vw, 36px);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin: 0; /* Remove margin from h1 */
-  padding-top: 50px; /* Optional: add space above the h1 if needed */
-  text-align: center;
+    color: #76c7c0; /* Pastel mint for the header */
+    font-size: clamp(20px, 5vw, 36px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0; /* Remove margin from h1 */
+    text-align: center;
 }
 
 /* Loading Animation */
 .loading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
 }
 
 .spinner {
-  width: 80px;
-  height: 80px;
-  border: 2px solid #f2a6b3; /* Soft pink for the spinner */
-  border-top-color: #f9e79f; /* Soft yellow for the spinner animation */
-  border-radius: 50%;
-  animation: spin 0.5s linear infinite;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #f2a6b3; /* Soft pink for the spinner */
+    border-top-color: #f9e79f; /* Soft yellow for the spinner animation */
+    border-radius: 50%;
+    animation: spin 0.5s linear infinite;
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Countdown Section */
 .countdown {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  text-align: center;
-  margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .countdown div {
-  margin: 10px;
+    margin: 10px;
 }
 
 .countdown p {
-  background-color: #f9e79f; /* Soft yellow for countdown boxes */
-  color: #34495e; /* Neutral text color */
-  font-size: clamp(30px, 5vw, 46px);
-  padding: 20px;
-  border-radius: 5px;
-  min-width: 80px;
+    background-color: #f9e79f; /* Soft yellow for countdown boxes */
+    color: #34495e; /* Neutral text color */
+    font-size: clamp(30px, 5vw, 46px);
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 80px;
 }
 
 .countdown h3 {
-  color: #76c7c0; /* Pastel mint for labels */
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: clamp(12px, 2vw, 18px);
-  margin-top: 10px;
+    color: #76c7c0; /* Pastel mint for labels */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: clamp(12px, 2vw, 18px);
+    margin-top: 10px;
 }
 
 /* Final Message */
 h4 {
-  color: #f2a6b3; /* Soft pink for final message */
-  font-size: clamp(20px, 4vw, 36px);
-  margin-top: 40px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-align: center;
+    color: #f2a6b3; /* Soft pink for final message */
+    font-size: clamp(20px, 4vw, 36px);
+    margin-top: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
 /* Socials Section */
 .socials {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
 }
 
 .socials ul {
-  display: flex;
+    display: flex;
 }
 
 .socials ul li {
-  margin: 0 20px;
+    margin: 0 20px;
 }
 
 /* Attribution */
 .attribution {
-  font-size: 11px;
-  text-align: center;
-  color: #34495e;
+    font-size: 11px;
+    text-align: center;
+    color: #34495e;
 }
 
 .attribution a {
-  color: #76c7c0;
+    color: #76c7c0;
 }
 
 /* Responsive Design for Small Screens */
 @media (max-width: 500px) {
-  .container {
-    padding: 0 20px;
-  }
+    .container {
+        padding: 0 20px;
+    }
 
-  .countdown {
-    flex-direction: column;
-  }
+    .countdown {
+        flex-direction: column;
+    }
 }
 
 /* Responsive Design for Large Screens */
 @media (min-width: 1440px) {
-  .stars img,
-  .hills img {
-    width: 1600px;
-  }
+    .stars img,
+    .hills img {
+        width: 1600px;
+    }
 }
 
 @media (min-width: 1600px) {
-  .stars img,
-  .hills img {
-    width: 1920px;
-  }
+    .stars img,
+    .hills img {
+        width: 1920px;
+    }
 }
