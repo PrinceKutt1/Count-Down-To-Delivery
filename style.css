@@ -1,33 +1,14 @@
-/* Reset */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-}
-
-ul {
-  list-style-type: none;
-}
-
-/* General Layout */
 body {
   font-family: "Red Hat Text", sans-serif;
-  background-color: #f2f7fa; /* Light pastel background */
-  color: #34495e; /* Soft, neutral text color */
-}
-
-/* Stars and Hills */
-.stars,
-.hills {
-  position: absolute;
-}
-
-.hills {
-  bottom: 0;
+  background-color: #f8f8f8; /* Soft baby-related background color */
+  color: #333;
 }
 
 /* Container */
@@ -37,132 +18,120 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 70vh;
-  padding: 0 20px;
+  padding: 20px;
+  text-align: center;
 }
 
 .container h1 {
-  color: #76c7c0; /* Pastel mint for the header */
-  font-size: clamp(20px, 5vw, 36px);
+  color: #72cdd1; /* Soft pastel color for the title */
+  font-size: 2.2rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 50px;
-  text-align: center;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
 }
 
-/* Loading Animation */
-.loading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10000;
-}
-
-.spinner {
-  width: 80px;
-  height: 80px;
-  border: 2px solid #f2a6b3; /* Soft pink for the spinner */
-  border-top-color: #f9e79f; /* Soft yellow for the spinner animation */
-  border-radius: 50%;
-  animation: spin 0.5s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Countdown Section */
+/* Countdown */
 .countdown {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-top: 20px;
+  gap: 15px;
 }
 
 .countdown div {
-  margin: 10px;
+  margin: 5px;
 }
 
 .countdown p {
-  background-color: #f9e79f; /* Soft yellow for countdown boxes */
-  color: #34495e; /* Neutral text color */
-  font-size: clamp(30px, 5vw, 46px);
+  background-color: #ffebcc; /* Soft pastel yellow for countdown blocks */
+  color: #333;
+  font-size: 3rem;
   padding: 20px;
-  border-radius: 5px;
-  min-width: 80px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .countdown h3 {
-  color: #76c7c0; /* Pastel mint for labels */
+  color: #72cdd1; /* Soft pastel matching the title */
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: clamp(12px, 2vw, 18px);
+  font-size: 1rem;
   margin-top: 10px;
 }
 
-/* Final Message */
+/* Subheading */
 h4 {
-  color: #f2a6b3; /* Soft pink for final message */
-  font-size: clamp(20px, 4vw, 36px);
+  color: #f783ac; /* Soft pink for the subheading */
+  font-size: 1.8rem;
   margin-top: 40px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-align: center;
+  letter-spacing: 1.5px;
 }
 
-/* Socials Section */
+/* Socials */
 .socials {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .socials ul {
   display: flex;
+  gap: 20px;
 }
 
 .socials ul li {
-  margin: 0 20px;
+  list-style: none;
 }
 
 /* Attribution */
 .attribution {
-  font-size: 11px;
+  font-size: 0.8rem;
   text-align: center;
-  color: #34495e;
+  color: #666;
+  margin-top: 20px;
 }
 
 .attribution a {
-  color: #76c7c0;
+  color: #72cdd1;
 }
 
-/* Responsive Design for Small Screens */
-@media (max-width: 500px) {
-  .container {
-    padding: 0 20px;
+/* Media Queries */
+@media (max-width: 768px) {
+  .countdown p {
+    font-size: 2.5rem;
+    padding: 15px;
   }
 
+  .container h1 {
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
   .countdown {
     flex-direction: column;
   }
-}
 
-/* Responsive Design for Large Screens */
-@media (min-width: 1440px) {
-  .stars img,
-  .hills img {
-    width: 1600px;
+  .countdown p {
+    font-size: 2rem;
+    padding: 10px;
   }
-}
 
-@media (min-width: 1600px) {
-  .stars img,
-  .hills img {
-    width: 1920px;
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  .socials ul {
+    gap: 15px;
   }
 }
