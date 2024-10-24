@@ -9,6 +9,10 @@ body {
   font-family: "Red Hat Text", sans-serif;
   background-color: #f8f8f8; /* Soft baby-related background color */
   color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Container */
@@ -17,9 +21,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
+  min-height: 70vh;
 }
 
 .container h1 {
