@@ -18,7 +18,9 @@ body {
     font-family: "Red Hat Text", sans-serif;
     background-color: #f2f7fa; /* Light pastel background */
     color: #34495e; /* Soft, neutral text color */
-    margin: 0; /* Ensure no margin on the body */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full height */
 }
 
 /* Stars and Hills */
@@ -37,7 +39,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 70vh;
+    flex: 1; /* Allow container to grow */
     padding: 0 20px;
 }
 
@@ -136,6 +138,7 @@ h4 {
     font-size: 11px;
     text-align: center;
     color: #34495e;
+    margin-top: auto; /* Push attribution to bottom */
 }
 
 .attribution a {
@@ -145,11 +148,20 @@ h4 {
 /* Responsive Design for Small Screens */
 @media (max-width: 500px) {
     .container {
-        padding: 0 20px;
+        padding: 0 10px; /* Reduced padding for smaller screens */
     }
 
     .countdown {
-        flex-direction: column;
+        flex-direction: column; /* Stack countdown items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .countdown div {
+        margin: 5px 0; /* Adjust margin for better spacing */
+    }
+
+    h4 {
+        margin-top: 20px; /* Adjust final message margin */
     }
 }
 
