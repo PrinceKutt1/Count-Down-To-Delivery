@@ -45,4 +45,171 @@ body {
     position: relative; /* Allow for absolute positioning of children */
 }
 
-/* Add remaining styles as needed */
+.container h1 {
+    color: #76c7c0; /* Pastel mint for the header */
+    font-size: clamp(20px, 5vw, 36px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 20px 0; /* Adjust margin for spacing */
+    text-align: center;
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s forwards; /* Fade-in effect */
+}
+
+/* Countdown Section */
+.countdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center countdown items */
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s forwards 0.5s; /* Fade-in effect with delay */
+}
+
+.countdown div {
+    margin: 10px;
+}
+
+.countdown p {
+    background-color: #f9e79f; /* Soft yellow for countdown boxes */
+    color: #34495e; /* Neutral text color */
+    font-size: clamp(30px, 5vw, 46px);
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 80px;
+}
+
+.countdown h3 {
+    color: #76c7c0; /* Pastel mint for labels */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: clamp(12px, 2vw, 18px);
+    margin-top: 10px;
+}
+
+/* Loading Animation */
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+}
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #f2a6b3; /* Soft pink for the spinner */
+    border-top-color: #f9e79f; /* Soft yellow for the spinner animation */
+    border-radius: 50%;
+    animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Final Message */
+h4 {
+    color: #f2a6b3; /* Soft pink for final message */
+    font-size: clamp(20px, 4vw, 36px);
+    margin-top: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    opacity: 0; /* Start hidden for animation */
+    animation: bounceIn 0.6s forwards 1s; /* Bounce effect with delay */
+}
+
+/* Bounce Animation */
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Socials Section */
+.socials {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.socials ul {
+    display: flex;
+}
+
+.socials ul li {
+    margin: 0 20px;
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.socials ul li:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: #34495e;
+    padding: 10px; /* Add padding for spacing */
+    margin-top: auto; /* Push attribution to bottom */
+}
+
+.attribution a {
+    color: #76c7c0;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 500px) {
+    .container {
+        padding: 0 10px; /* Reduced padding for smaller screens */
+    }
+
+    .countdown {
+        flex-direction: column; /* Stack countdown items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .countdown div {
+        margin: 5px 0; /* Adjust margin for better spacing */
+    }
+
+    h4 {
+        margin-top: 20px; /* Adjust final message margin */
+    }
+}
+
+/* Responsive Design for Large Screens */
+@media (min-width: 1440px) {
+    .stars img,
+    .hills img {
+        width: 1600px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .stars img,
+    .hills img {
+        width: 1920px;
+    }
+}
