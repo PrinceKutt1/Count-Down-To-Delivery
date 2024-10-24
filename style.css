@@ -18,6 +18,7 @@ body {
   font-family: "Red Hat Text", sans-serif;
   background-color: #f2f7fa; /* Light pastel background */
   color: #34495e; /* Soft, neutral text color */
+  margin: 0; /* Ensure no margin on the body */
 }
 
 /* Stars and Hills */
@@ -45,7 +46,8 @@ body {
   font-size: clamp(20px, 5vw, 36px);
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 50px;
+  margin: 0; /* Remove margin from h1 */
+  padding-top: 50px; /* Optional: add space above the h1 if needed */
   text-align: center;
 }
 
