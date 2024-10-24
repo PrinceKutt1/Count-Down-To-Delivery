@@ -27,6 +27,7 @@ body {
 .stars,
 .hills {
     position: absolute;
+    width: 100%; /* Ensure full width */
 }
 
 .hills {
@@ -41,6 +42,7 @@ body {
     justify-content: center;
     flex: 1; /* Allow container to grow */
     padding: 0 20px;
+    position: relative; /* Allow for absolute positioning of children */
 }
 
 .container h1 {
@@ -48,7 +50,7 @@ body {
     font-size: clamp(20px, 5vw, 36px);
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin: 0; /* Remove margin from h1 */
+    margin: 20px 0; /* Adjust margin for spacing */
     text-align: center;
 }
 
@@ -80,7 +82,7 @@ body {
 .countdown {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center; /* Center countdown items */
     text-align: center;
     margin-top: 20px;
 }
@@ -138,6 +140,7 @@ h4 {
     font-size: 11px;
     text-align: center;
     color: #34495e;
+    padding: 10px; /* Add padding for spacing */
     margin-top: auto; /* Push attribution to bottom */
 }
 
