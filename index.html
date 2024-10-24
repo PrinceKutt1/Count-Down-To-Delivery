@@ -1,141 +1,88 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: "Red Hat Text", sans-serif;
-  background-color: #f8f8f8; /* Soft baby-related background color */
-  color: #333;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-/* Container */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  min-height: 70vh;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-.container h1 {
-  color: #72cdd1; /* Soft pastel color for the title */
-  font-size: 2.2rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 15px; /* Reduced space */
-}
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-/* Countdown */
-.countdown {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 15px;
-}
+    <title>Expected Time To Corelli Nana Ama's Delivery | coded by Prince</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="stars">
+        <img src="./images/bg-stars.svg" alt="" />
+      </div>
 
-.countdown div {
-  margin: 5px;
-}
+      <h1>Estimated Time To Corelli Nana Ama's Delivery</h1>
 
-.countdown p {
-  background-color: #ffebcc; /* Soft pastel yellow for countdown blocks */
-  color: #333;
-  font-size: 3rem;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
+      <div class="loading">
+        <div class="spinner"></div>
+      </div>
 
-.countdown h3 {
-  color: #72cdd1; /* Soft pastel matching the title */
-  text-transform: uppercase;
-  font-size: 1rem;
-  margin-top: 10px;
-}
+      <div class="countdown">
+        <div>
+          <p id="months">10</p>
+          <h3>Months</h3>
+        </div>
+        <div>
+          <p id="days">10</p>
+          <h3>Days</h3>
+        </div>
+        <div>
+          <p id="hours">10</p>
+          <h3>Hours</h3>
+        </div>
+        <div>
+          <p id="minutes">10</p>
+          <h3>Minutes</h3>
+        </div>
+        <div>
+          <p id="seconds">10</p>
+          <h3>Seconds</h3>
+        </div>
+      </div>
 
-/* Subheading */
-h4 {
-  color: #f783ac; /* Soft pink for the subheading */
-  font-size: 1.8rem;
-  margin-top: 20px; /* Adjusted from 40px to 20px */
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-}
+      <div>
+        <h4>To Nana's Delivery!</h4>
+      </div>
 
-/* Socials */
-.socials {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
+      <div class="socials">
+        <ul>
+          <li><img src="./images/icon-facebook.svg" alt="" /></li>
+          <li><img src="./images/icon-pinterest.svg" alt="" /></li>
+          <li><img src="./images/icon-instagram.svg" alt="" /></li>
+        </ul>
+      </div>
 
-.socials ul {
-  display: flex;
-  gap: 20px;
-}
+      <div class="hills">
+        <img src="./images/pattern-hills.svg" alt="" />
+      </div>
+    </div>
 
-.socials ul li {
-  list-style: none;
-}
 
-/* Attribution */
-.attribution {
-  font-size: 0.8rem;
-  text-align: center;
-  color: #666;
-  margin-top: 20px;
-}
+    <div class="attribution">
+       Coded by
+      <a href="https://princewellskutorglo.netlify.app/" target="_blank" rel="noreferrer">
+        Prince Wells Kutorglo
+      </a>
+      .
+    </div>
 
-.attribution a {
-  color: #72cdd1;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .countdown p {
-    font-size: 2.5rem;
-    padding: 15px;
-  }
-
-  .container h1 {
-    font-size: 1.8rem;
-  }
-
-  h4 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .countdown {
-    flex-direction: column;
-  }
-
-  .countdown p {
-    font-size: 2rem;
-    padding: 10px;
-  }
-
-  .container h1 {
-    font-size: 1.5rem;
-  }
-
-  h4 {
-    font-size: 1.2rem;
-  }
-
-  .socials ul {
-    gap: 15px;
-  }
-}
+    <script src="./app.js"></script>
+  </body>
+</html>
